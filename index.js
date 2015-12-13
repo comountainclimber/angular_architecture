@@ -28,6 +28,30 @@ app.get('/customers', function(req,res){
 	// res.json(500,{error:'An error has occurred!'})
 })
 
+app.get('/orders', function(req, res){
+	var orders=[]
+	for (var i=0; i<customers.length;i++){
+		if (customers[i].orders){
+			for (j=0;j<customers[i].orders.length;j++){
+				orders.push(customers[i].orders[j])
+			}
+		}
+	}
+	res.json(orders)
+})
+
+app.delete('/customers/:id', function(req,res){
+	var customerId = parseInt(req.params.id)
+	var data = { status: true}
+	for (var i=0; i<customers.length;i++){
+		if(customers[i].id === customerId){
+			customers.splice(i,1)
+			data = {status: true}
+			break
+		}
+	}
+})
+
 // Creating Server and Listening for Connections \\
 var port = 3000
 app.listen(port, function(){

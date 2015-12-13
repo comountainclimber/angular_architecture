@@ -4,6 +4,7 @@ body {
 
 .app_name h2{
 	background-color: white;
+	border-radius: 10px;
 }
 
 .display{
@@ -31,4 +32,9 @@ body {
 
 .display .no_pointer{
 	cursor: default;
+}
+
+.delete {
+	color:red;
+	cursor: pointer;
 }
