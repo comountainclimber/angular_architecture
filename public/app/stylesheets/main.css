@@ -1,0 +1,29 @@
+body {
+	background-color: peachpuff;
+}
+
+.app_name h2{
+	background-color: white;
+}
+
+.display{
+	background-color: white;
+	margin:auto;
+}
+
+.display th{
+	padding: 10px;
+    text-align: center;
+    background-color: slategrey;
+    color:white;
+}
+
+.display td{
+	padding: 10px;
+    text-align: center;
+}
+
+.table_row {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

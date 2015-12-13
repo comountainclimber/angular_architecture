@@ -1,21 +1,55 @@
-<h2> Customers </h2>
-Filter: <input type='text' ng-model='customerFilter.name'/>
-<br /><br />
-<table>
-	<tr>
-		<th ng-click="doSort('name')">Name</th>
-		<th ng-click="doSort('city')">City</th>
-		<th ng-click="doSort('orderTotal')">Order Total</th>
-		<th ng-click="doSort('joined')">Joined</th>
-		<th>Orders</th>
-	</tr>
+<div class="container">
 
-	<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
-		<td>{{cust.name | uppercase}}</td>
-		<td>{{cust.city | lowercase}}</td>
-		<td>{{cust.orderTotal | currency}}</td>
-		<td>{{cust.joined | date}}</td>
-		<td> <a href="#/orders/{{cust.id}}"> View Orders</a></td>
-	</tr>
-</table>
-<span> Total customers: {{customers.length}} </span>
+	<div class="row">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-6 text-center app_name">
+			<h2> {{appSettings.title}}</h2>
+		</div>
+		<div class="col-sm-3">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			Search:<input type='text' ng-model='customerFilter.name'/>
+		</div>
+	</div>
+			
+	<div class="row">
+		<div class="col-sm-12 table_row">
+			<table class="table-bordered display">
+				<tr>
+					<th ng-click="doSort('name')">Name</th>
+					<th ng-click="doSort('city')">City</th>
+					<th ng-click="doSort('orderTotal')">Order Total</th>
+					<th ng-click="doSort('joined')">Joined</th>
+					<th>Orders</th>
+				</tr>
+
+				<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+					<td>{{cust.name | uppercase}}</td>
+					<td>{{cust.city | lowercase}}</td>
+					<td>{{cust.orderTotal | currency}}</td>
+					<td>{{cust.joined | date}}</td>
+					<td> <a href="#/orders/{{cust.id}}"> View Orders</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<span> Total customers: {{customers.length}} </span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<footer>App version:{{appSettings.version}}</footer>
+		</div>
+	</div>
+	
+
+	
+</div>

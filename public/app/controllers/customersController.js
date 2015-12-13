@@ -1,13 +1,20 @@
 (function(){
 	angular.module('customersApp')
-	.controller('customerController', ['$scope', 'customersFactory', function($scope, customersFactory){
+	.controller('customerController', ['$scope', 'customersFactory', 'appSettings', '$log', function($scope, customersFactory, appSettings, $log){
 
 		$scope.sortBy = 'name'
 		$scope.reverse = false
 		$scope.customers = []
+		$scope.appSettings = appSettings
 
 		function init(){
-			$scope.customers = customersFactory.getCustomers()
+			customersFactory.getCustomers()
+				.success(function(customers){
+					$scope.customers=customers
+				})
+				.error(function(data,status,headers,config){
+					$log.log(data.error + ' ' + status)
+				})
 		}
 
 		init();
