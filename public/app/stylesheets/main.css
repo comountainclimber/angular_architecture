@@ -16,6 +16,7 @@ body {
     text-align: center;
     background-color: slategrey;
     color:white;
+    cursor:pointer;
 }
 
 .display td{
@@ -26,4 +27,8 @@ body {
 .table_row {
 	margin-bottom: 10px;
 	margin-top: 10px;
+}
+
+.display .no_pointer{
+	cursor: default;
 }

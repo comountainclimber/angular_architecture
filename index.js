@@ -36,6 +36,19 @@ app.listen(port, function(){
 
 var customers = [{id: 1,
 				joined: '2008-03-10', 
+				name: 'Daniel Goldstein', 
+				city: 'Denver', 
+				orderTotal: 5604.943,
+				orders: [
+					{
+					id:0,
+					product: 'AngularJS consulting services',
+					total: 5604.943
+					}
+				]
+				},
+				{id: 2,
+				joined: '2008-03-10', 
 				name: 'Steve Freeman', 
 				city: 'Cranford', 
 				orderTotal: 666.6666,
@@ -47,7 +60,7 @@ var customers = [{id: 1,
 					}
 				]
 				},
-				{id:2,
+				{id:3,
 				joined: '2000-12-02', 
 				name: 'Mick Jagger', 
 				city: 'NYC', 
@@ -65,9 +78,22 @@ var customers = [{id: 1,
 					}
 				]	
 				},
-				{id:3,
+				{id:4,
 				joined: '2000-12-02',
 				name: 'Pat Doucher', 
-				city: 'Westfield', 
-				orderTotal: 420}
+				city: 'Boulder', 
+				orderTotal: 420,
+				orders: [
+					{
+					id:4,
+					product: 'Ipad',
+					total: 50.00 
+					},
+					{
+					id:5,
+					product: 'Iphone',
+					total: 6.32 
+					}
+				]
+				}
 				]

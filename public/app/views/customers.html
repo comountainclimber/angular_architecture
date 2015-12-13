@@ -12,7 +12,13 @@
 
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			Search:<input type='text' ng-model='customerFilter.name'/>
+			Search by customer: <input type='text' ng-model='customerFilter.name'/>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			(click on category to sort data)
 		</div>
 	</div>
 			
@@ -24,7 +30,7 @@
 					<th ng-click="doSort('city')">City</th>
 					<th ng-click="doSort('orderTotal')">Order Total</th>
 					<th ng-click="doSort('joined')">Joined</th>
-					<th>Orders</th>
+					<th class="no_pointer"></th>
 				</tr>
 
 				<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
