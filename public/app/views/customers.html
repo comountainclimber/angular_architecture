@@ -34,7 +34,7 @@
 					<th class="no_pointer"></th>
 				</tr>
 
-				<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+				<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse" class="repeat-animation">
 					<td>{{cust.name | uppercase}}</td>
 					<td>{{cust.city | lowercase}}</td>
 					<td>{{cust.orderTotal | currency}}</td>
