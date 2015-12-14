@@ -1,5 +1,5 @@
 angular.module('customersApp').value('appSettings', {
-	title: 'Customers Application',
+	title: 'Customer Information',
 	version: '1.0'
 })
 

@@ -1,11 +1,16 @@
 body {
-	background-color: peachpuff;
+	background-color:rgba(153, 153, 153, 0.4);
 }
 
 .app_name h2{
 	background-color: white;
 	border-radius: 10px;
 }
+
+.app_name .header_info {
+	font-size: 10px
+}
+
 
 .display{
 	background-color: white;
@@ -37,4 +42,8 @@ body {
 .delete {
 	color:red;
 	cursor: pointer;
+}
+
+.logo{
+	background-color: yellow;
 }

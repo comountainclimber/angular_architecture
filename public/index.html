@@ -8,22 +8,32 @@
 <body>
 	<header>
 		<nav class="navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="#/customers">
-					Customers
-					</a>
-				</li>
-				<li>
-					<a href="#/orders">
-					Orders
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
 
+					<li>
+						<a href="#/customers">
+						Customers
+						</a>
+					</li>
+					<li>
+						<a href="#/orders">
+						Orders
+						</a>
+					</li>
+
+				</ul>
 		
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li> <h6 class="logo"> Your Company's Customer Invoice Application </h6> </li> -->
+        				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      				</ul>
+
+				
+			</div>
+		</nav>
+
 	<div ng-view>
 	</div>
 
